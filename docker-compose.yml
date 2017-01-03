@@ -1,0 +1,30 @@
+# To build the images
+# docker-compose build
+
+# To run the containers
+# docker-compose up
+
+# Which version of the docker-compose API to use
+version: '2'
+
+services:
+
+  # api server container
+  api:
+    container_name: api
+    image: golang:onbuild
+    volumes:
+      - ./api:/api
+    ports:
+      - 8000:8000
+    # command: go run /api/main.go
+
+  # client app webserver
+  nginx:
+    container_name: nginx
+    image: nginx
+    volumes: 
+      - ./client:/usr/share/nginx/html
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "8080:80"
