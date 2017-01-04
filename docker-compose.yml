@@ -12,11 +12,11 @@ services:
   # api server container
   api:
     container_name: api
-    image: golang:onbuild
+    build: ./api
     volumes:
       - ./api:/api
     ports:
-      - 8000:8000
+      - 9000:9000 
     # command: go run /api/main.go
 
   # client app webserver
