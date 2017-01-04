@@ -1,11 +1,40 @@
 <html>
     <head>
-        <title>go-facts</title>
+        <title>Go-fact</title>
+        <style>
+        body {
+            /* Background image is centered vertically and horizontally at all times */
+            background-position: center center;
+            
+            /* Background image doesn't tile */
+            background-repeat: no-repeat;
+            
+            /* Background image is fixed in the viewport so that it doesn't move when 
+                the content's height is greater than the image's height */
+            background-attachment: fixed;
+            
+            /* This is what makes the background image rescale based
+                on the container's size */
+            background-size: cover;
+            
+            /* Set a background color that will be displayed
+                while the background image is loading */
+            background-color: #464646;
+        }
+
+        .text {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3em;
+            color: white;
+            text-align: center;
+        }
+
+        </style>
     </head>
     <body>
-
+        <span class="text"></span>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="/app.js"></script>
     </body>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="/app.js"></script>
 </html>
