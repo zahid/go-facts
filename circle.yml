@@ -4,7 +4,6 @@ machine:
 
 dependencies:
   override:
-    - go get
     - docker login -u $docker_hub_user -p $docker_hub_password
 
 compile:
