@@ -4,7 +4,7 @@ machine:
 
 dependencies:
   override:
-    - docker login -u $docker_hub_user -p $docker_hub_password
+    - echo $docker_hub_email | docker login -u $docker_hub_user -p $docker_hub_password
 
 compile:
   override:
