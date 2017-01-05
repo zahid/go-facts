@@ -1,3 +1,7 @@
+machine:
+  services:
+    - docker
+
 dependencies:
   override:
     - go get
@@ -5,5 +9,5 @@ dependencies:
 
 compile:
   override:
-    - docker build -t zahid/go-facts-api .
+    - docker build -t zahid/go-facts-api api/
     - docker push zahid/go-facts-api
