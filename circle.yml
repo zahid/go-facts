@@ -1,0 +1,9 @@
+dependencies:
+  override:
+    - go get
+    - docker login -u $docker_hub_user -p $docker_hub_password
+
+compile:
+  override:
+    - docker build -t zahid/go-facts-api .
+    - docker push zahid/go-facts-api

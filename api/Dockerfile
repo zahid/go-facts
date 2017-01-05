@@ -3,8 +3,8 @@
 FROM golang
 
 # Copy the local package files to the container's workspace.
-ADD . /go/src/github.com/zahid/go-facts/
-WORKDIR /go/src/github.com/zahid/go-facts/
+ADD . /go/src/github.com/zahid/go-facts-api
+WORKDIR /go/src/github.com/zahid/go-facts-api
 
 RUN go get
 

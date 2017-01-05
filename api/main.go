@@ -40,7 +40,7 @@ func main() {
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/fact", GetRandomFact)
 
-	log.Fatal(http.ListenAndServe(":9000", router))
+	log.Fatal(http.ListenAndServe(":8080", router))
 }
 
 func GetRandomFact(w http.ResponseWriter, r *http.Request) {
