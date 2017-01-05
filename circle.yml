@@ -9,4 +9,9 @@ dependencies:
 compile:
   override:
     - docker build -t zahid/go-facts-api api/
-    - docker push zahid/go-facts-api
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - docker push zahid/go-facts-api
