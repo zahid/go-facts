@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     });
 
-    $.getJSON('http://localhost:8080/api/fact', function(data) {
+    $.getJSON('http://localhost/api/fact', function(data) {
         $(".text").text(data.text);
         $("body").css("background-image", "url(" + data.image + ".jpg)");
         $(window).resize();
